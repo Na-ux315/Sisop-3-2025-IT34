@@ -119,7 +119,6 @@ void *agent_thread(void *arg) {
                 snprintf(shared_data->orders[i].status, sizeof(shared_data->orders[i].status),
                          "Delivered by Agent %c", agent_name);
 
-                // Log
                 write_log(&agent_name, "Express", shared_data->orders[i].name, shared_data->orders[i].address);
 
                 printf("Agent %c delivered package to %s\n", agent_name, shared_data->orders[i].name);
